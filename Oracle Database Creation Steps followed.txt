@@ -1,0 +1,46 @@
+
+create table user1(user_id number primary key,name varchar2(100),phone_no number,email varchar2(100),address varchar2(100),reg_date date,password varchar2(100),upload_photo long);
+create sequence userid2 start with 100 increment by 1;
+insert into user1(user_id,name,phone_no,email,address,reg_date,password,upload_photo) values(userid2.nextval,'Ankit',4578008234,'ankit@gmail.com','noida','03-jan-2021','ankit','img.jpg');
+insert into user1(user_id,name,phone_no,email,address,reg_date,password,upload_photo) values(userid2.nextval,'Rahul',9586234712,'rahul@gmail.com','banglore','03-mar-2021','rahul','img1.jpg');
+insert into user1(user_id,name,phone_no,email,address,reg_date,password,upload_photo) values(userid2.nextval,'gouthami',8524379162,'gouthami@gmail.com','anantapur','03-feb-2021','gouthami','img2.jpg');
+insert into user1(user_id,name,phone_no,email,address,reg_date,password,upload_photo) values(userid2.nextval,'iswarya',9256279162,'iswarya@gmail.com','nellore','22-feb-2021','iswarya','img3.jpg');
+insert into user1(user_id,name,phone_no,email,address,reg_date,password,upload_photo) values(userid2.nextval,'harshitha',7456279162,'harshitha@gmail.com','vijayawada','22-jan-2020','harshitha','img4.jpg');
+commit;
+
+
+
+
+create table contact(user_id number references user1 , name varchar2(30), Email varchar2(20), Phone_no number, Message varchar2(20), contact_id number primary key);
+create sequence contactid start with 1 increment by 1;
+insert into contact values (100, 'Ankit', 'ankit@gmail.com', 1234, 'Message',contactid.nextval);
+insert into contact values (101, 'Rahul', 'rahul@gmail.com', 1235, 'Message',contactid.nextval);
+insert into contact values (102, 'Gouthami', 'Gouthami@gmail.com', 1236, 'Message',contactid.nextval);
+insert into contact values (103, 'Ishwarya', 'Ishwarya@gmail.com', 1237, 'Message',contactid.nextval);
+insert into contact values (104, 'Harshitha', 'Harshitha@gmail.com', 1238, 'Message',contactid.nextval);
+
+
+create table admin ( admin_id number primary key, name varchar2(100),email varchar2(100), password varchar2(100));
+insert into admin values (1,’rahul’,’rahul@gmail.com’,’pass’);
+insert into admin values (2,’ankit’,’ankit@gmail.com’,’pass’);
+insert into admin values (3,’gowthami’,’gowthami@gmail.com’,’pass’);
+insert into admin values (4,’aishwarya’,’aishwarya@gmail.com’,’pass’);
+insert into admin values (5,’harshitha’,’harshitha@gmail.com’,’pass’);
+
+
+
+create table course ( course_id number primary key, c_name varchar2(100),c_desp varchar2(100), c_fees varchar2(100),c_resource varchar2(100));
+insert into course values (111,’JAVA’,’Programing language’,299, ’video.mp4’);
+insert into course values (112,’C Programming’,’Programming language’,199,’cprogram.mp4’);
+insert into course values (113,’C++ Programming’,’Programming language’,199,’c++program.mp4’);
+
+
+
+create table feedback(user_id number references user1,name varchar2(100),email varchar2(100),f_id number primary key,feedback varchar2(100));
+create sequence feedid start with 1 increment by 1;
+insert into feedback(user_id,name,email,f_id,feedback)values(100,'ankit','ankit@gmail.com',feedid.nextval,'good');
+insert into feedback(user_id,name,email,f_id,feedback)values(104,'harshitha','harshitha@gmail.com',feedid.nextval,'good');
+commit;
+
+
+
