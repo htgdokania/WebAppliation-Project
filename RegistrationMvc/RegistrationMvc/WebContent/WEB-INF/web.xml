@@ -10,14 +10,23 @@
  </welcome-file-list>
  
   <servlet>
-	 <servlet-name>ContactServlet</servlet-name>
-	 <servlet-class>com.mvc.controller.ContactServlet</servlet-class>
-</servlet>
- 
- <servlet>
 	 <servlet-name>RegisterServlet</servlet-name>
 	 <servlet-class>com.mvc.controller.RegisterServlet</servlet-class>
 </servlet>
+
+  <servlet>
+	 <servlet-name>ContactServlet</servlet-name>
+	 <servlet-class>com.mvc.controller.ContactServlet</servlet-class>
+</servlet>
+ <servlet>
+	 <servlet-name>FeedbackServlet</servlet-name>
+	 <servlet-class>com.mvc.controller.FeedbackServlet</servlet-class>
+</servlet> 
+ <servlet>
+	 <servlet-name>CourseServlet</servlet-name>
+	 <servlet-class>com.mvc.controller.CourseServlet</servlet-class>
+</servlet> 
+
 
 
  <servlet-mapping>
@@ -28,6 +37,15 @@
  <servlet-mapping>
 	 <servlet-name>RegisterServlet</servlet-name>
 	 <url-pattern>/RegisterServlet</url-pattern>
+ </servlet-mapping>
+
+ <servlet-mapping>
+	 <servlet-name>FeedbackServlet</servlet-name>
+	 <url-pattern>/FeedbackServlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+	 <servlet-name>CourseServlet</servlet-name>
+	 <url-pattern>/CourseServlet</url-pattern>
  </servlet-mapping>
 
  

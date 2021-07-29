@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Contact</title>
+<title>Contact Us</title>
 <script> 
 function validate()
 { 
@@ -43,7 +43,7 @@ function validate()
 </script> 
 </head>
 <body style="font-size:30px;">
-<center><h2>Contact Form </h2></center>
+<center><h2>Contact Us </h2></center>
     <form name="form" action="ContactServlet" method="post" onsubmit="return validate()">
         <table align="center">       
          <tr>

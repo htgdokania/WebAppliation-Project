@@ -5,10 +5,10 @@
 <div style="text-align:center"><body style=" font-size:30px;">
 	<h2>Elearning Forms</h2>
 
-	<br><input type="submit" value=" Registration" style="height:50px; width:200px" 
+	<br><input type="submit" value=" New User Registration" style="height:50px; width:200px" 
 			onclick="window.location='Register.jsp'"></input>
 	
-	<br><br><input type="submit" value=" Course Form" style="height:50px; width:200px"
+	<br><br><input type="submit" value=" Add new Course " style="height:50px; width:200px"
 			onclick="window.location='Course.jsp'"></input>
 		
 	
